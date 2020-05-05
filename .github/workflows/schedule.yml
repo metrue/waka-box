@@ -1,5 +1,8 @@
 name: Update gist with WakaTime stats
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "*/10 * * * *"
 jobs:
@@ -14,4 +17,4 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
           npm install
-          npm run
+          npm run start
