@@ -76,6 +76,6 @@ function generateBarChart(percent, size) {
   try {
     await main();
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 })();
